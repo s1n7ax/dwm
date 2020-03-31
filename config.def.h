@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 18;       /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -35,9 +35,24 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     iscentered     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,             1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,             0,           -1 },
+	/* class      						instance    title       tags mask			iscentered     	isfloating   monitor */
+	{ "csgo_linux64",  					NULL,       NULL,       1,					1,				0,           -1 },
+	{ "Dirt4",  						NULL,       NULL,       1,					1,				0,           -1 },
+	{ "code-oss",  						NULL,       NULL,       1,					1,				0,           -1 },
+	{ "Darktable",  					NULL,       NULL,       1,					1,				0,           -1 },
+	{ "Gimp",  							NULL,       NULL,       1,					1,				0,           -1 },
+
+	{ "SimpleScreenRecorder",			NULL,       NULL,       1 << 1,				1,				0,           -1 },
+	{ "pavucontrol-qt",					NULL,       NULL,       1 << 1,				1,				0,           -1 },
+	{ "Steam",							NULL,       NULL,       1 << 1,				1,				0,           -1 },
+	{ "discord",						NULL,       NULL,       1 << 1,				1,				0,           -1 },
+
+	{ "firefox",  						NULL,       NULL,       1 << 2,				1,				0,           -1 },
+	{ "Chromium",  						NULL,       NULL,       1 << 2,				1,				0,           -1 },
+	{ "Tor Browser",  					NULL,       NULL,       1 << 2,				1,				1,           -1 },
+
+	{ "dolphin",  						NULL,       NULL,       1 << 3,				1,				0,           -1 },
+	{ "Thunar",  						NULL,       NULL,       1 << 3,				1,				0,           -1 },
 };
 
 /* layout(s) */
@@ -71,7 +86,7 @@ static const char *termcmd[]  = { "st", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,			            XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -79,9 +94,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY,             			XK_w,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
