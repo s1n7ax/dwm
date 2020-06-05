@@ -6,8 +6,8 @@ static const unsigned int gappx     = 18;       /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "Noto,monospace:size=12" };
+static const char dmenufont[]       = { "Noto,monospace:size=12" };
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static char normbgcolor[]           = "#222222";
@@ -44,8 +44,6 @@ static const Rule rules[] = {
 	{ "Audacity",  						NULL,       NULL,       1,					1,				0,           -1 },
 	{ "kdenlive",  						NULL,       NULL,       1,					1,				0,           -1 },
 
-	{ "SimpleScreenRecorder",			NULL,       NULL,       1 << 1,				1,				0,           -1 },
-	{ "pavucontrol-qt",					NULL,       NULL,       1 << 1,				1,				0,           -1 },
 	{ "Steam",							NULL,       NULL,       1 << 1,				1,				0,           -1 },
 	{ "Lutris",							NULL,       NULL,       1 << 1,				1,				0,           -1 },
 	{ "discord",						NULL,       NULL,       1 << 1,				1,				0,           -1 },
@@ -58,6 +56,9 @@ static const Rule rules[] = {
 
 	{ "dolphin",  						NULL,       NULL,       1 << 4,				1,				0,           -1 },
 	{ "Thunar",  						NULL,       NULL,       1 << 4,				1,				0,           -1 },
+	{ "SimpleScreenRecorder",			NULL,       NULL,       1 << 4,				1,				0,           -1 },
+	{ "Pavucontrol",					NULL,       NULL,       1 << 4,				1,				0,           -1 },
+	{ "pavucontrol-qt",					NULL,       NULL,       1 << 4,				1,				0,           -1 },
 };
 
 /* layout(s) */
