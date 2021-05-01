@@ -6,8 +6,8 @@ static const unsigned int gappx     = 30;       /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Noto,monospace:size=12" };
-static const char dmenufont[]       = { "Noto,monospace:size=12" };
+static const char *fonts[]          = { "Cascadia Code,Noto,monospace:size=12" };
+static const char dmenufont[]       = { "Cascadia Code,Noto,monospace:size=12" };
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static char normbgcolor[]           = "#222222";
@@ -39,9 +39,9 @@ static const Rule rules[] = {
 	{ "csgo_linux64",  					NULL,       NULL,       1,					1,				0,           -1 },
 	{ "Dirt4",  						NULL,       NULL,       1,					1,				0,           -1 },
 	{ "code-oss",  						NULL,       NULL,       1,					1,				0,           -1 },
+	{ "Eclipse",  						NULL,       NULL,       1,					1,				0,           -1 },
 	{ "Darktable",  					NULL,       NULL,       1,					1,				0,           -1 },
 	{ "Gimp",  							NULL,       NULL,       1,					1,				0,           -1 },
-	{ "Audacity",  						NULL,       NULL,       1,					1,				0,           -1 },
 	{ "kdenlive",  						NULL,       NULL,       1,					1,				0,           -1 },
 
 	{ "Steam",							NULL,       NULL,       1 << 1,				1,				0,           -1 },
@@ -50,15 +50,19 @@ static const Rule rules[] = {
 
 	{ "firefox",  						NULL,       NULL,       1 << 2,				1,				0,           -1 },
 	{ "Chromium",  						NULL,       NULL,       1 << 2,				1,				0,           -1 },
-	{ "Tor Browser",  					NULL,       NULL,       1 << 2,				1,				1,           -1 },
+	{ "Brave-browser",  				NULL,       NULL,       1 << 2,				1,				0,           -1 },
 
 	{ "Spotify",  						NULL,       NULL,       1 << 3,				1,				0,           -1 },
+	{ "Tor Browser",  					NULL,       NULL,       1 << 3,				1,				1,           -1 },
 
+	{ "obs",  							NULL,       NULL,       1 << 4,				1,				0,           -1 },
+	{ "Audacity",  						NULL,       NULL,       1 << 4,				1,				0,           -1 },
 	{ "dolphin",  						NULL,       NULL,       1 << 4,				1,				0,           -1 },
 	{ "Thunar",  						NULL,       NULL,       1 << 4,				1,				0,           -1 },
 	{ "SimpleScreenRecorder",			NULL,       NULL,       1 << 4,				1,				0,           -1 },
-	{ "Pavucontrol",					NULL,       NULL,       1 << 4,				1,				0,           -1 },
-	{ "pavucontrol-qt",					NULL,       NULL,       1 << 4,				1,				0,           -1 },
+
+	{ "Pavucontrol",					NULL,       NULL,       1 << 5,				1,				0,           -1 },
+	{ "pavucontrol-qt",					NULL,       NULL,       1 << 5,				1,				0,           -1 },
 };
 
 /* layout(s) */
@@ -87,7 +91,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "st" };
 
 static Key keys[] = {
 	/* modifier                     key						   function        argument */
