@@ -4,10 +4,10 @@
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 30;       /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Cascadia Code,Noto,monospace:size=12" };
-static const char dmenufont[]       = { "Cascadia Code,Noto,monospace:size=12" };
+static const char *fonts[]          = { "Cascadia Code,Noto,monospace:size=16" };
+static const char dmenufont[]       = { "Cascadia Code,Noto,monospace:size=16" };
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static char normbgcolor[]           = "#222222";
@@ -28,7 +28,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -53,12 +53,13 @@ static const Rule rules[] = {
 	{ "Brave-browser",  				NULL,       NULL,       1 << 2,				1,				0,           -1 },
 
 	{ "Spotify",  						NULL,       NULL,       1 << 3,				1,				0,           -1 },
+	{ "dolphin",  						NULL,       NULL,       1 << 3,				1,				0,           -1 },
 	{ "Tor Browser",  					NULL,       NULL,       1 << 3,				1,				1,           -1 },
 	{ "Thunar",  						NULL,       NULL,       1 << 3,				1,				0,           -1 },
 
 	{ "obs",  							NULL,       NULL,       1 << 4,				1,				0,           -1 },
+	{ "Tenacity",  						NULL,       NULL,       1 << 4,				1,				0,           -1 },
 	{ "Audacity",  						NULL,       NULL,       1 << 4,				1,				0,           -1 },
-	{ "dolphin",  						NULL,       NULL,       1 << 4,				1,				0,           -1 },
 	{ "SimpleScreenRecorder",			NULL,       NULL,       1 << 4,				1,				0,           -1 },
 
 	{ "Pavucontrol",					NULL,       NULL,       1 << 5,				1,				0,           -1 },
@@ -68,7 +69,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
@@ -92,11 +93,12 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "st" };
+static const char *roficmd[] = { "rofi","-show", "drun" };
+static const char *termcmd[]  = { "alacritty" };
 
 static Key keys[] = {
 	/* modifier                     key						   function        argument */
-	{ MODKEY,                       XK_semicolon,				spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_semicolon,				spawn,          {.v = roficmd } },
 	{ MODKEY,			            XK_Return,				   	spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,					   	togglebar,      {0} },
 	{ MODKEY,                       XK_a,					   	focusstack,     {.i = +1 } },
