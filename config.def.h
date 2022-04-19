@@ -36,17 +36,18 @@ static const Rule rules[] = {
      *    WM_NAME(STRING) = title
      */
     /* class                    instance    title       tags mask            iscentered         isfloating   monitor */
-    { "csgo_linux64",           NULL,       NULL,       1,                    0,                0,           1 },
-    { "Dirt4",                  NULL,       NULL,       1,                    0,                0,           1 },
-    { "code-oss",               NULL,       NULL,       1,                    0,                0,           1 },
-    { "Eclipse",                NULL,       NULL,       1,                    0,                0,           1 },
-    { "Darktable",              NULL,       NULL,       1,                    0,                0,           1 },
-    { "Gimp",                   NULL,       NULL,       1,                    0,                0,           1 },
-    { "kdenlive",               NULL,       NULL,       1,                    0,                0,           1 },
+    { "csgo_linux64",           NULL,       NULL,       1,                    0,                0,           0 },
+    { "Dirt4",                  NULL,       NULL,       1,                    0,                0,           0 },
+    { "code-oss",               NULL,       NULL,       1,                    0,                0,           0 },
+    { "Eclipse",                NULL,       NULL,       1,                    0,                0,           0 },
+    { "Darktable",              NULL,       NULL,       1,                    0,                0,           0 },
+    { "Gimp",                   NULL,       NULL,       1,                    0,                0,           0 },
+    { "kdenlive",               NULL,       NULL,       1,                    0,                0,           0 },
+    { "resolve",                NULL,       NULL,       1,                    0,                0,           0 },
 
-    { "Steam",                  NULL,       NULL,       1 << 1,               0,                0,           1 },
-    { "Lutris",                 NULL,       NULL,       1 << 1,               0,                0,           1 },
-    { "discord",                NULL,       NULL,       1 << 1,               0,                0,           1 },
+    { "Steam",                  NULL,       NULL,       1 << 1,               0,                0,           0 },
+    { "Lutris",                 NULL,       NULL,       1 << 1,               0,                0,           0 },
+    { "discord",                NULL,       NULL,       1 << 1,               0,                0,           0 },
 
     { "firefox",                NULL,       NULL,       1 << 2,               0,                0,           -1 },
     { "Chromium",               NULL,       NULL,       1 << 2,               0,                0,           -1 },
@@ -57,6 +58,7 @@ static const Rule rules[] = {
     { "dolphin",                NULL,       NULL,       1 << 3,               0,                0,           -1 },
     { "Tor Browser",            NULL,       NULL,       1 << 3,               0,                1,           -1 },
     { "Thunar",                 NULL,       NULL,       1 << 3,               0,                0,           -1 },
+    { "Org.gnome.Nautilus",     NULL,       NULL,       1 << 3,               0,                0,           -1 },
 
     { "obs",                    NULL,       NULL,       1 << 4,               0,                0,           1 },
     { "Tenacity",               NULL,       NULL,       1 << 4,               0,                0,           1 },
