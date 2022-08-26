@@ -114,7 +114,7 @@ static const char *dmenucmd[] = {"dmenu_run", "-m",  dmenumon,       "-fn",
                                  normfgcolor, "-sb", selbordercolor, "-sf",
                                  selfgcolor,  NULL};
 static const char *roficmd[] = {"rofi", "-show", "drun"};
-static const char *termcmd[] = {"alacritty"};
+static const char *termcmd[] = {"st"};
 static const char *ivolume[] = {"amixer", "-D", "pulse", "sset",
                                 "Master"
                                 "5%+"};
