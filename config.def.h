@@ -59,16 +59,17 @@ static const Rule rules[] = {
     { "Tor Browser",            NULL,       NULL,       1 << 3,               0,                1,           -1 },
     { "Thunar",                 NULL,       NULL,       1 << 3,               0,                0,           -1 },
     { "Org.gnome.Nautilus",     NULL,       NULL,       1 << 3,               0,                0,           -1 },
+    { "transmission",           NULL,       NULL,       1 << 3,               0,                0,           1 },
+    { "Transmission-gtk",       NULL,       NULL,       1 << 3,               0,                0,           1 },
 
     { "obs",                    NULL,       NULL,       1 << 4,               0,                0,           1 },
     { "Tenacity",               NULL,       NULL,       1 << 4,               0,                0,           1 },
     { "Audacity",               NULL,       NULL,       1 << 4,               0,                0,           1 },
     { "SimpleScreenRecorder",   NULL,       NULL,       1 << 4,               0,                0,           1 },
 
-    { "Pavucontrol",            NULL,       NULL,       1 << 5,               0,                0,           0 },
-    { "pavucontrol-qt",         NULL,       NULL,       1 << 5,               0,                0,           0 },
-    { "transmission",           NULL,       NULL,       1 << 5,               0,                0,           0 },
-    { "Transmission-gtk",       NULL,       NULL,       1 << 5,               0,                0,           0 },
+    { "Pavucontrol",            NULL,       NULL,       1 << 5,               0,                0,           1 },
+    { "pavucontrol-qt",         NULL,       NULL,       1 << 5,               0,                0,           1 },
+    { "easyeffects",            NULL,       NULL,       1 << 5,               0,                0,           1 },
 
 };
 
@@ -100,10 +101,14 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 static const char *roficmd[] = { "rofi","-show", "drun" };
-static const char *termcmd[]  = { "st" };
+static const char *termcmd[]  = { "alacritty" };
+static const char *ivolume[] = { "amixer", "-D", "pulse", "sset", "Master" "5%+" };
+static const char *dvolume[] = { "amixer", "-D", "pulse", "sset", "Master" "5%-" };
 
 static Key keys[] = {
     /* modifier                     key                           function        argument */
+    { MODKEY|ShiftMask,             XK_plus,                        spawn,          {.v = ivolume } },
+    { MODKEY|ShiftMask,             XK_minus,                       spawn,          {.v = dvolume } },
     { MODKEY,                       XK_semicolon,                   spawn,          {.v = dmenucmd } },
     { MODKEY,                       XK_Return,                      spawn,          {.v = termcmd } },
     { MODKEY,                       XK_b,                           togglebar,      {0} },
