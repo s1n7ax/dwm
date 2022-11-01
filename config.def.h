@@ -48,6 +48,7 @@ static const Rule rules[] = {
     { "Steam",                  NULL,       NULL,       1 << 1,               0,                0,           0 },
     { "Lutris",                 NULL,       NULL,       1 << 1,               0,                0,           0 },
     { "discord",                NULL,       NULL,       1 << 1,               0,                0,           0 },
+    { "jetbrains-idea-ce",      NULL,       NULL,       1 << 1,               0,                0,           0 },
 
     { "firefox",                NULL,       NULL,       1 << 2,               0,                0,           -1 },
     { "Chromium",               NULL,       NULL,       1 << 2,               0,                0,           -1 },
