@@ -60,6 +60,7 @@ static const Rule rules[] = {
     { "Tor Browser",            NULL,       NULL,       1 << 3,               0,                1,           -1 },
     { "Thunar",                 NULL,       NULL,       1 << 3,               0,                0,           -1 },
     { "Org.gnome.Nautilus",     NULL,       NULL,       1 << 3,               0,                0,           -1 },
+    { "org.gnome.Nautilus",     NULL,       NULL,       1 << 3,               0,                0,           -1 },
     { "transmission",           NULL,       NULL,       1 << 3,               0,                0,           1 },
     { "Transmission-gtk",       NULL,       NULL,       1 << 3,               0,                0,           1 },
 
