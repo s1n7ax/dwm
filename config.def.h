@@ -44,6 +44,8 @@ static const Rule rules[] = {
     { "Gimp",                   NULL,       NULL,       1,                    0,                0,           0 },
     { "kdenlive",               NULL,       NULL,       1,                    0,                0,           0 },
     { "resolve",                NULL,       NULL,       1,                    0,                0,           0 },
+    { "Spotify",                NULL,       NULL,       1,                    0,                0,           1 },
+    { "spotify",                NULL,       NULL,       1,                    0,                0,           1 },
 
     { "Steam",                  NULL,       NULL,       1 << 1,               0,                0,           0 },
     { "Lutris",                 NULL,       NULL,       1 << 1,               0,                0,           0 },
@@ -54,8 +56,6 @@ static const Rule rules[] = {
     { "Chromium",               NULL,       NULL,       1 << 2,               0,                0,           -1 },
     { "Brave-browser",          NULL,       NULL,       1 << 2,               0,                0,           -1 },
 
-    { "Spotify",                NULL,       NULL,       1 << 3,               0,                0,           1 },
-    { "spotify",                NULL,       NULL,       1 << 3,               0,                0,           1 },
     { "dolphin",                NULL,       NULL,       1 << 3,               0,                0,           -1 },
     { "Tor Browser",            NULL,       NULL,       1 << 3,               0,                1,           -1 },
     { "Thunar",                 NULL,       NULL,       1 << 3,               0,                0,           -1 },
@@ -64,10 +64,10 @@ static const Rule rules[] = {
     { "transmission",           NULL,       NULL,       1 << 3,               0,                0,           1 },
     { "Transmission-gtk",       NULL,       NULL,       1 << 3,               0,                0,           1 },
 
-    { "obs",                    NULL,       NULL,       1 << 4,               0,                0,           1 },
-    { "Tenacity",               NULL,       NULL,       1 << 4,               0,                0,           1 },
-    { "Audacity",               NULL,       NULL,       1 << 4,               0,                0,           1 },
-    { "SimpleScreenRecorder",   NULL,       NULL,       1 << 4,               0,                0,           1 },
+    { "obs",                    NULL,       NULL,       1 << 4,               0,                0,           -1 },
+    { "Tenacity",               NULL,       NULL,       1 << 4,               0,                0,           -1 },
+    { "Audacity",               NULL,       NULL,       1 << 4,               0,                0,           -1 },
+    { "SimpleScreenRecorder",   NULL,       NULL,       1 << 4,               0,                0,           -1 },
 
     { "Pavucontrol",            NULL,       NULL,       1 << 5,               0,                0,           1 },
     { "pavucontrol-qt",         NULL,       NULL,       1 << 5,               0,                0,           1 },
