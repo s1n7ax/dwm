@@ -114,7 +114,7 @@ static const char *dmenucmd[] = {"dmenu_run", "-m",  dmenumon,       "-fn",
                                  normfgcolor, "-sb", selbordercolor, "-sf",
                                  selfgcolor,  NULL};
 static const char *roficmd[] = {"rofi", "-show", "drun"};
-static const char *termcmd[] = {"st"};
+static const char *termcmd[] = {"alacritty"};
 static const char *ivolume[] = {"amixer", "-D", "pulse", "sset",
                                 "Master"
                                 "5%+"};
@@ -136,8 +136,8 @@ static Key keys[] = {
     //------------------------------------------------------------------//
     //                            processes                             //
     //------------------------------------------------------------------//
-    {MODKEY, XK_o, spawn, {.v = dmenucmd}},
-    {MODKEY, XK_p, killclient, {0}},
+    {MODKEY, XK_p, spawn, {.v = dmenucmd}},
+    {MODKEY, XK_g, killclient, {0}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
 
     /* {MODKEY, XK_b, togglebar, {0}}, */
@@ -170,9 +170,9 @@ static Key keys[] = {
     //------------------------------------------------------------------//
     //                             layouts                              //
     //------------------------------------------------------------------//
-    {MODKEY, XK_w, setlayout, {.v = &layouts[0]}},
+    {MODKEY, XK_q, setlayout, {.v = &layouts[0]}},
     {MODKEY, XK_f, setlayout, {.v = &layouts[1]}},
-    {MODKEY, XK_q, setlayout, {.v = &layouts[2]}},
+    {MODKEY, XK_w, setlayout, {.v = &layouts[2]}},
     {MODKEY, XK_space, togglefloating, {0}},
     /* {MODKEY | ShiftMask, XK_space, togglefloating, {0}}, */
 
