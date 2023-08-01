@@ -38,16 +38,15 @@ static const Rule rules[] = {
      */
     /* class                    instance    title       tags mask iscentered
        isfloating   monitor */
-    {"csgo_linux64", NULL, NULL, 1, 0, 0, 0},
-    {"Dirt4", NULL, NULL, 1, 0, 0, 0},
     {"code-oss", NULL, NULL, 1, 0, 0, 0},
     {"Eclipse", NULL, NULL, 1, 0, 0, 0},
     {"Darktable", NULL, NULL, 1, 0, 0, 0},
     {"Gimp", NULL, NULL, 1, 0, 0, 0},
     {"kdenlive", NULL, NULL, 1, 0, 0, 0},
     {"resolve", NULL, NULL, 1, 0, 0, 0},
-    {"Spotify", NULL, NULL, 1, 0, 0, 1},
-    {"spotify", NULL, NULL, 1, 0, 0, 1},
+    {"obsidian", NULL, NULL, 1, 0, 0, 0},
+    {"csgo_linux64", NULL, NULL, 1, 0, 0, 0},
+    {"Dirt4", NULL, NULL, 1, 0, 0, 0},
 
     {"Steam", NULL, NULL, 1 << 1, 0, 0, 0},
     {"Lutris", NULL, NULL, 1 << 1, 0, 0, 0},
@@ -71,9 +70,12 @@ static const Rule rules[] = {
     {"Audacity", NULL, NULL, 1 << 4, 0, 0, -1},
     {"SimpleScreenRecorder", NULL, NULL, 1 << 4, 0, 0, -1},
 
-    {"Pavucontrol", NULL, NULL, 1 << 5, 0, 0, 1},
-    {"pavucontrol-qt", NULL, NULL, 1 << 5, 0, 0, 1},
-    {"easyeffects", NULL, NULL, 1 << 5, 0, 0, 1},
+    {"Pavucontrol", NULL, NULL, 1 << 6, 0, 0, 1},
+    {"pavucontrol-qt", NULL, NULL, 1 << 6, 0, 0, 1},
+    {"easyeffects", NULL, NULL, 1 << 6, 0, 0, 1},
+
+    {"Spotify", NULL, NULL, 1 << 7, 0, 0, 1},
+    {"spotify", NULL, NULL, 1 << 7, 0, 0, 1},
 
 };
 
@@ -151,8 +153,8 @@ static Key keys[] = {
     {MODKEY, XK_comma, focusmon, {.i = -1}},
     {MODKEY, XK_period, focusmon, {.i = +1}},
 
-    /* {MODKEY, XK_a, incnmaster, {.i = +1}}, */
-    /* {MODKEY, XK_z, incnmaster, {.i = -1}}, */
+    {MODKEY, XK_l, incnmaster, {.i = +1}},
+    {MODKEY, XK_u, incnmaster, {.i = -1}},
 
     //------------------------------------------------------------------//
     //                             monitor                              //
@@ -163,7 +165,7 @@ static Key keys[] = {
     //------------------------------------------------------------------//
     //                              resize                              //
     //------------------------------------------------------------------//
-    {MODKEY, XK_h, setmfact, {.f = -0.05}},
+    {MODKEY, XK_m, setmfact, {.f = -0.05}},
     {MODKEY, XK_i, setmfact, {.f = +0.05}},
     {MODKEY, XK_Tab, view, {0}},
 
